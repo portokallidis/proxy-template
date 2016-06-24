@@ -1,0 +1,16 @@
+apps:
+  - script   : 'index.js'
+    name : 'proxy-server'
+    watch : ['index.js']
+    
+  - script   : '../npm/bin/http-server'
+    args: '. -p 3011 -a 127.0.0.1'
+    name : 'static-server'
+    watch  : ['.']
+    cwd : '../static-server'
+    
+  - script   : '../npm/bin/http-server'
+    args: '. -p 3012 -a 127.0.0.1'
+    name : 'guest-server'
+    watch  : ['.']
+    cwd : '../guest_folder/public'
