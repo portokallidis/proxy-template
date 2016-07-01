@@ -21,5 +21,12 @@ var proxy = require('redbird')({
 
 //STATIC SERVER
 // proxy.register("static.schoolroom.gr", "http://localhost:3011", {  ssl: devicesHTTPS });
+// proxy.register("static.schoolroom.gr", "http://localhost:3011", {  ssl: devicesHTTPS });
+proxy.register("api.schoolroom.gr", "http://localhost:3005");
+proxy.register("arc.schoolroom.gr", "http://localhost:3006");
+proxy.register("loopback.schoolroom.gr", "http://localhost:3007");
+proxy.register("triangular.schoolroom.gr", "http://localhost:3008");
+proxy.register("react-angle.schoolroom.gr", "http://localhost:3009");
+proxy.register("mean-angle.schoolroom.gr", "http://localhost:3010");
 proxy.register("static.schoolroom.gr", "http://localhost:3011");
 proxy.register("dev.schoolroom.gr", "http://localhost:3012");

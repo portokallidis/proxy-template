@@ -3,6 +3,13 @@ apps:
     name : 'proxy-server'
     watch : ['index.js']
     
+  - script   : 'server/server.js'
+    env: 
+      PORT: 3005
+    name : 'schoolroom-api'
+    watch  : ['.','server','common']
+    cwd : '../projects/loopback/schoolroom-api'
+    
   - script   : '../npm/bin/http-server'
     args: '. -p 3011 -a 127.0.0.1'
     name : 'static-server'
